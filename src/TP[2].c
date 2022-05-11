@@ -39,7 +39,5 @@ int main(void) {
 		printf("Elija las opcines:");
 		scanf("%d", &opciones);
 
-
-
 	return EXIT_SUCCESS;
 }
