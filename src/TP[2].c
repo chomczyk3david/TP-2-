@@ -25,6 +25,10 @@ typedef struct{
 }passenger;
 
 int main(void) {
+	int opciones;
+	do{
+
+	}while(opciones != 5);
 
 	int MenuOpciones();
 
