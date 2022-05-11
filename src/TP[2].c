@@ -26,6 +26,20 @@ typedef struct{
 
 int main(void) {
 
+	int MenuOpciones();
+
+		int opciones;
+
+		printf("1-Inicializar \n");
+		printf("2-Cargar \n");
+		printf("3-Mostrar \n");
+		printf("4-Calculo Promedio \n");
+		printf("5-Ordenar \n");
+		printf("6-Salir:\n");
+		printf("Elija las opcines:");
+		scanf("%d", &opciones);
+
+
 
 	return EXIT_SUCCESS;
 }
