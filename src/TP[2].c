@@ -10,38 +10,36 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "pasajero.h"
+#include "input.h"
 
-typedef struct{
 
-	int id;
-	char name[51];
-	char lastname[51];
-	float price;
-	char flycode[10];
-	int typePassenger;
-	int statusFlight;
-	int isEmpty;
-
-}passenger;
-
+#define VACIO -1
+#define TAM 5
 int main(void) {
-	int opciones;
+	setbuf(stdout,NULL);
+
+	int opcion;
+	int respuesta;
+	epassenger listaPasajeros[TAM];
+
+	initPassengers(listaPasajeros,TAM);
+
 	do{
+		respuesta = MenuOpciones();
+		switch(respuesta)
+		{
+			case 1:
 
-	}while(opciones != 5);
+			break;
 
-	int MenuOpciones();
+			case 2:
 
-		int opciones;
+			break;
+		}
 
-		printf("1-Inicializar \n");
-		printf("2-Cargar \n");
-		printf("3-Mostrar \n");
-		printf("4-Calculo Promedio \n");
-		printf("5-Ordenar \n");
-		printf("6-Salir:\n");
-		printf("Elija las opcines:");
-		scanf("%d", &opciones);
+	}while(opcion==6);
+
 
 	return EXIT_SUCCESS;
 }
