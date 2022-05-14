@@ -38,8 +38,9 @@ typedef struct{
 
 
 int initPassengers(ePassenger list[], int len);
-int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[],float price,int typePassenger, char flycode[],int statusFlight);
+int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[],float price,int typePassenger, char flycode[],int statusFligh);
 ePassenger ingresoUnPasajero(void);
 int cargaDePasajeros(ePassenger list[], int len);
 int printPassenger(ePassenger list[], int len);
 void mostrarUnPasajero(ePassenger unPasajero);
+void mostrarTodosLosPasajeros(ePassenger lista[], int len);

@@ -48,15 +48,13 @@ int initPassengers(ePassenger list[], int len)
  */
 int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[],float price,int typePassenger, char flycode[],int statusFlight)
 {
-	ePassenger aux;
+
 	int i =0;
 		for(;i<len;i++){
 			if(list[i].isEmpty == VACIO)
 			{
 				list[i].id = id;
 				list[i].price = price;
-				aux.typePassenger = typePassenger;
-				aux.statusFlight = statusFlight;
 				strcpy(list[i].name,name);
 				strcpy(list[i].lastname,lastname);
 				strcpy(list[i].flycode,flycode);
@@ -113,7 +111,16 @@ int printPassenger(ePassenger list[], int len)
 
 void mostrarUnPasajero(ePassenger unPasajero)
 {
-	printf(" %s %s %s %.2f\n ",unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
+	printf("==========PASAJEROS ABORDO================\n");
+	printf(" NOMBRE| APELLIDO|CIDIGO VUELO| IMPORTE \n");
+	printf(" %s   2%s   2%s  2%.2f\n ",unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
 }
 
-
+void mostrarTodosLosPasajeros(ePassenger lista[], int len)
+{
+	int i;
+	for ( i=0; i<len; i++)
+	{
+		mostrarUnPasajero(lista[i]);
+	}
+}

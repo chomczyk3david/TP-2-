@@ -36,9 +36,11 @@ int main(void) {
 				 }else{
 					 printf("Error al cargar\n");
 				 }
+
 			break;
 				//modificaciones delm pasajero
 			case 2:
+				mostrarTodosLosPasajeros(listaPasajeros, TAM);
 
 			break;
 			case 3:

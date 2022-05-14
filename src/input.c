@@ -15,10 +15,10 @@
 int MenuOpciones()
 {
 	int opciones;
-
+	printf("**************************ELIJA LAS OPCIONES DE VUELO***************************************\n");
 	utn_getNumero(&opciones,"1)-Altas:\n2)-Modificar:\n3)-Baja:\n4)-Informar\n-a)-Listado de Pasajeros Ordenados Alfabeticamnete por Apellido y tipo de pasajero\n"
 			"-b)-Total y promedio de los precios de los pasajes, y cuantos pasajeros superan el precio\n"
-			"-c)-Listado de los pasajeros por codigo de vuelo y estado de los vuelos 'ACTIVOS'\n5)-Salir:\n","Error ingrese nuevos datos\n",1,6,3);
+			"-c)-Listado de los pasajeros por codigo de vuelo y estado de los vuelos 'ACTIVOS'\n5)-Salir:\n","Error ingrese nuevos datos\n",1,5,3);
 
 	return opciones;
 }
