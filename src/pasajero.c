@@ -97,6 +97,23 @@ int cargaDePasajeros(ePassenger list[], int len)
 	return retorno;
 
 }
+int printPassenger(ePassenger list[], int len)
+{
+	int i;
+	int retorno =1;
+	if(list!=NULL && len>0){
+		for(i=0;i<len;i++){
+			mostrarUnPasajero(list[i]);
+			retorno =0;
+		}
+	}
 
+	return retorno;
+}
+
+void mostrarUnPasajero(ePassenger unPasajero)
+{
+	printf(" %s %s %s %.2f\n ",unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
+}
 
 
