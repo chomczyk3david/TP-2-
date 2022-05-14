@@ -79,7 +79,24 @@ ePassenger ingresoUnPasajero(void)
 
 	return pasajero;
 }
+int cargaDePasajeros(ePassenger list[], int len)
+{
+	int retorno =1;
+	int i;
+	if(list!=NULL && len >0)
+	{
+		for(i=0;i<len;i++)
+		{
+			if(list[i].isEmpty == VACIO)
+			{
+				list[i]= ingresoUnPasajero();
+				retorno =0;
+			}
+		}
+	}
+	return retorno;
 
+}
 
 
 
