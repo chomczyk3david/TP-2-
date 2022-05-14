@@ -21,7 +21,8 @@ int main(void) {
 
 	int opcion;
 	int respuesta;
-	epassenger listaPasajeros[TAM];
+	int ingreso;
+	ePassenger listaPasajeros[TAM];
 
 	initPassengers(listaPasajeros,TAM);
 
@@ -30,6 +31,7 @@ int main(void) {
 		switch(respuesta)
 		{
 			case 1:
+				ingreso =ingresoUnPasajero(listaPasajeros,50);
 
 			break;
 

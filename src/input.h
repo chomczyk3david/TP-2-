@@ -13,3 +13,5 @@
 #endif /* INPUT_H_ */
 int MenuOpciones();
 int utn_getNumero(int* pResultado, char* mensaje,char* mensajeError,int minimo,int maximo,int reintentos);
+void getString(char cadena[],char mensaje[],int tam);
+float PedirFlotante(char mensaje[], char mensajeError[], int min,int max);
