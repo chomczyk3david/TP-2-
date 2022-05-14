@@ -15,7 +15,7 @@
 
 
 #define VACIO -1
-#define TAM 5
+#define TAM 2
 int main(void) {
 	setbuf(stdout,NULL);
 
@@ -30,8 +30,11 @@ int main(void) {
 		switch(respuesta)
 		{
 			case 1:
-				 ingresoUnPasajero(listaPasajeros,50);
-
+				 if(!cargaDePasajeros(listaPasajeros,TAM)){
+					 printf("carga exitosa:");
+				 }else{
+					 printf("Error al cargar");
+				 }
 			break;
 
 			case 2:
