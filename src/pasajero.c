@@ -67,7 +67,7 @@ int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[]
 }
 ePassenger ingresoUnPasajero(void)
 {
-	int id=0;
+
 	ePassenger pasajero;
 
 	getString(pasajero.name,"Ingrese su nombre",50);
@@ -75,10 +75,10 @@ ePassenger ingresoUnPasajero(void)
 	getString(pasajero.flycode,"Ingrese codigo de vuelo",50);
 	pasajero.price = PedirFlotante("Ingrese Importe de vuelo", "Ingrese un valor numerico", 1, 99999);
 
-	id++;
+
 	return pasajero;
 }
-int cargaDePasajeros(ePassenger list[], int len)
+int cargaDePasajeros(ePassenger list[], int len ,int id)
 {
 	int retorno =1;
 	int i;
@@ -89,6 +89,7 @@ int cargaDePasajeros(ePassenger list[], int len)
 			if(list[i].isEmpty == VACIO)
 			{
 				list[i]= ingresoUnPasajero();
+				id++;
 				retorno =0;
 			}
 		}
@@ -113,8 +114,8 @@ int printPassenger(ePassenger list[], int len)
 void mostrarUnPasajero(ePassenger unPasajero)
 {
 	printf("==========PASAJEROS ABORDO================\n");
-	printf(" NOMBRE| APELLIDO|CIDIGO VUELO| IMPORTE \n");
-	printf(" %s   2%s   2%s  2%.2f\n ",unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
+	printf("ID| NOMBRE| APELLIDO|CIDIGO VUELO| IMPORTE \n");
+	printf("%d  5%s   2%s   2%s  2%.2f\n ",unPasajero.id,unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
 }
 
 void mostrarTodosLosPasajeros(ePassenger lista[], int len)
