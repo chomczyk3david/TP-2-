@@ -49,8 +49,8 @@ int initPassengers(ePassenger list[], int len)
 int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[],float price,int typePassenger, char flycode[],int statusFlight)
 {
 
-	int i =0;
-		for(;i<len;i++){
+	int i;
+		for(i=0;i<len;i++){
 			if(list[i].isEmpty == VACIO)
 			{
 				list[i].id = id;
@@ -65,6 +65,34 @@ int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[]
 
 	return 0;
 }
+int removePassenger(ePassenger list[], int len, int *id)
+{
+	int removerPass;
+	int retorno = -1;
+	int i;
+	mostrarTodosLosPasajeros(list, len);
+	removerPass = PedirNumeros("Ingrese id a dar de baja:\n", "Error ingrese id existente:\n", 0, 999);
+	if(list!=NULL && len >0){
+		for(i=0;i<len;i++)
+		{
+			if(removerPass == list[i].id)
+			{
+				list[i].isEmpty = VACIO;
+				retorno =0;
+			}
+
+		}
+
+	}
+
+	return retorno;
+}
+/**
+ * @fn ePassenger ingresoUnPasajero(void)
+ * @brief
+ *
+ * @return
+ */
 ePassenger ingresoUnPasajero(void)
 {
 

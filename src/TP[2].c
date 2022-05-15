@@ -15,11 +15,12 @@
 
 
 #define VACIO -1
-#define TAM 2
+#define TAM 3
 int main(void) {
 	setbuf(stdout,NULL);
 
 	int opcion;
+	int modi;
 	opcion = 0;
 	int idNuevo =0;
 	int respuesta;
@@ -40,12 +41,24 @@ int main(void) {
 				 }
 
 			break;
-				//modificaciones delm pasajero
+				//modificaciones del pasajero
 			case 2:
+				/*
+				do
+				{
+
+				}while(modi!=3);
+*/
 				mostrarTodosLosPasajeros(listaPasajeros, TAM);
 
 			break;
 			case 3:
+				if(!removePassenger(listaPasajeros, TAM,&idNuevo))
+				{
+					printf("modificacion exitosa:\n");
+				}else{
+					printf("no se logro la modificacion:\n");
+				}
 			break;
 			case 4:
 			break;

@@ -44,3 +44,4 @@ int cargaDePasajeros(ePassenger list[], int len,int id);
 int printPassenger(ePassenger list[], int len);
 void mostrarUnPasajero(ePassenger unPasajero);
 void mostrarTodosLosPasajeros(ePassenger lista[], int len);
+int removePassenger(ePassenger list[], int len, int *id);

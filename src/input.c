@@ -70,3 +70,15 @@ float PedirFlotante(char mensaje[], char mensajeError[], int min,int max)
 		}
 return numero;
 }
+int PedirNumeros(char mensaje[], char mensajeError[], int min,int max)
+{
+	int numero;
+	printf("%s",mensaje);
+	scanf("%d", &numero);
+		while(numero < min || numero > max)
+		{
+			printf("%s",mensajeError);
+			scanf("%d", &numero);
+		}
+	return numero;
+}
