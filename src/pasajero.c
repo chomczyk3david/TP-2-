@@ -67,6 +67,7 @@ int addPassenger(ePassenger list[], int len, int id, char name[],char lastname[]
 }
 ePassenger ingresoUnPasajero(void)
 {
+	int id=0;
 	ePassenger pasajero;
 
 	getString(pasajero.name,"Ingrese su nombre",50);
@@ -74,7 +75,7 @@ ePassenger ingresoUnPasajero(void)
 	getString(pasajero.flycode,"Ingrese codigo de vuelo",50);
 	pasajero.price = PedirFlotante("Ingrese Importe de vuelo", "Ingrese un valor numerico", 1, 99999);
 
-
+	id++;
 	return pasajero;
 }
 int cargaDePasajeros(ePassenger list[], int len)

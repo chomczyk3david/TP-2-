@@ -21,6 +21,7 @@ int main(void) {
 
 	int opcion;
 	opcion = 0;
+	int id =0;
 	int respuesta;
 	ePassenger listaPasajeros[TAM];
 
@@ -31,6 +32,7 @@ int main(void) {
 		switch(respuesta)
 		{	//altas de pasajero
 			case 1:
+
 				 if(!cargaDePasajeros(listaPasajeros,TAM)){
 					 printf("carga fue exitosa:\n");
 				 }else{
@@ -50,9 +52,11 @@ int main(void) {
 			case 5:
 
 			break;
+
+
 		}
 
-	}while(opcion!=5);
+	}while(opcion!=6);
 	printf("gracias por volar compania CHOMCZYK");
 
 
