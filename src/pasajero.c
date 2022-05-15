@@ -89,6 +89,7 @@ int cargaDePasajeros(ePassenger list[], int len ,int id)
 			if(list[i].isEmpty == VACIO)
 			{
 				list[i]= ingresoUnPasajero();
+				list[i].id=id;
 				id++;
 				retorno =0;
 			}
@@ -114,8 +115,8 @@ int printPassenger(ePassenger list[], int len)
 void mostrarUnPasajero(ePassenger unPasajero)
 {
 	printf("==========PASAJEROS ABORDO================\n");
-	printf("ID| NOMBRE| APELLIDO|CIDIGO VUELO| IMPORTE \n");
-	printf("%d  5%s   2%s   2%s  2%.2f\n ",unPasajero.id,unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
+	printf("ID  | NOMBRE  | APELLIDO  |CIDIGO VUELO  | IMPORTE \n");
+	printf("%2d    %5s     %5s       %5s      %10.2f\n ",unPasajero.id,unPasajero.name,unPasajero.lastname,unPasajero.flycode,unPasajero.price);
 }
 
 void mostrarTodosLosPasajeros(ePassenger lista[], int len)

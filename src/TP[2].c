@@ -21,7 +21,7 @@ int main(void) {
 
 	int opcion;
 	opcion = 0;
-	int idNuevo;
+	int idNuevo =0;
 	int respuesta;
 	ePassenger listaPasajeros[TAM];
 
@@ -34,7 +34,7 @@ int main(void) {
 			case 1:
 
 				 if(!cargaDePasajeros(listaPasajeros,TAM,idNuevo)){
-					 printf("carga fue exitosa y su id es %d:\n",idNuevo);
+					 printf("carga fue exitosa :\n");
 				 }else{
 					 printf("Error al cargar\n");
 				 }
